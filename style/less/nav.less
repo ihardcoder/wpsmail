@@ -1,0 +1,72 @@
+.wps_nav {
+	position: relative;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	width: 100%;
+	min-width: 1024px;
+	height: 50px;
+	max-height: 50px;
+	background: #333;
+	background: #000;
+	opacity: 0.8;
+	font-size: 12px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+	.wps_nav_container {
+		margin: 0 auto;
+		width: 100%;
+		height: 50px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 9999;
+	}
+	.wps_nav_box {
+		height: 100%;
+		margin: 0 auto;
+		max-width: 1000px;
+	}
+	.wps_nav_list {
+		cursor: default;
+		margin: 0;
+		padding: 0;
+		height: 100%;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		text-align: justify;
+		-ms-text-justify: distribute-all-lines;
+		list-style: none;
+	}
+	.wps_nav_item {
+		display: inline-block;
+		*float: left;
+		position: relative;
+		height: 50px;
+		line-height: 50px;
+		z-index: 1;
+		vertical-align: top;
+		text-align: center;
+		padding: 0 2px;
+		margin-left: 80px;
+
+		&_logo {
+			margin-left: 0;
+		}
+	}
+	.wps_nav_link {
+		text-decoration: none;
+		color: #fff;
+		font-family: @font_yahei;
+
+		&:hover, &:visited {
+			text-decoration: none;
+			color: #fff;
+		}
+	}
+}

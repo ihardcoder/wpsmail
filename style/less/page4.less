@@ -1,0 +1,156 @@
+.wps_page_4 {
+	.displayIE();
+	.wps_foreground {
+		background-color: #f6f6f6;
+	}
+	.wps_page_4_content {
+		text-align: center;
+		font-family: @font_fz;
+		height: 100%;
+		width: 100%;
+
+		&-ready {
+			.wps_page_4_content_part1 {
+				bottom: 15%;
+				opacity: 1;
+			}
+			.wps_page_4_content_part2 {
+				bottom: 10%;
+				margin-bottom: 0;
+			}
+		}
+	}
+	.wps_page_4_content_part1 {
+		position: absolute;
+		width: 100%;
+		left: 0;
+		bottom: 5%;
+		margin-bottom: 335px;
+		height: 160px;
+		opacity: 0;
+		.transition(all 0.8s ease-in-out);
+
+		&-ready {
+			bottom: 15%;
+			opacity: 1;
+		}
+		.wps_p_title {
+			font-size: 60px;
+			height: 60px;
+			line-height: 60px;
+			margin-bottom: 20px;
+		}
+		.wps_entry_panel {
+			position: absolute;
+			width: auto;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			text-align: left;
+		}
+		.wps_p_entry {
+			font-size: 16px;
+			height: 16px;
+			line-height: 16px;
+			margin-bottom: 10px;
+		}
+	}
+	.wps_page_4_content_part2 {
+		position: absolute;
+		left: 0;
+		bottom: 50%;
+		margin-bottom: -168px;
+		width: 100%;
+		.transition(all 0.8s ease-in-out);
+
+		&-ready {
+			bottom: 10%;
+			margin-bottom: 0;
+		}
+		.maclist {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			position: relative;
+			height: 335px;
+			opacity: 0;
+			.transition(all 0.8s ease-in-out);
+
+			.macitem_min {
+				opacity: 0;
+
+				&_1, &_2 {
+					.transform(translate3d(50px, 0, 0));
+				}
+				&_3, &_4 {
+					.transform(translate3d(-50px, 0, 0));
+				}
+			}
+			&-transition {
+				opacity: 1;
+			}
+			&-ready {
+				.macitem_min {
+					.transform(translate3d(0, 0, 0));
+					opacity: 1;
+				}
+			}
+		}
+		.macitem {
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			.transition(all 0.8s ease-in-out);
+
+			&_large {
+				margin-left: -234px;
+				z-index: 1;
+			}
+			&_min {
+				&_1 {
+					margin-left: -1004px;
+				}
+				&_2 {
+					margin-left: -552px;
+				}
+				&_3 {
+					margin-left: 140px;
+				}
+				&_4 {
+					margin-left: 592px;
+				}
+			}
+		}
+		.loading {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin: -60px 0 0 -45px;
+			z-index: 1;
+			width: 90px;
+			height: 60px;
+
+			&-ready {
+				.count {
+					opacity: 0;
+				}
+				.wps_icon_checked {
+					opacity: 1;
+				}
+			}
+		}
+		.count {
+			font-size: 60px;
+			height: 60px;
+			line-height: 60px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			.transition(all 0.5s ease-in-out);
+		}
+		.wps_icon_checked {
+			.transition(all 0.5s ease-in-out);
+			opacity: 0;
+		}
+	}
+}

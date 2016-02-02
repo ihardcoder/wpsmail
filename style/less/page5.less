@@ -1,0 +1,130 @@
+.wps_page_5 {
+	.displayIE();
+	.wps_background {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		&-ready {
+			.camera_list {
+				transform-origin: center;
+				-webkit-transform-origin: center;
+				-moz-transform-origin: center;
+				.transition(all .5s ease-in-out);
+				.transform(scale(2));
+				opacity: 0;
+			}
+		}
+		.wps_background_drama {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			min-width: 100%;
+			min-height: 100%;
+		}
+		.wps_background_img {
+			position: absolute;
+			min-height: 100%;
+		}
+		.camera_list {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			width: 244px;
+			height: 244px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+		}
+	}
+	.wps_foreground {
+		.cover {
+			background-image: url('../../res/img/bak_page_5_blur.jpg');
+			background-position: 50% 50%;
+			background-size: cover;
+			opacity: 0;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			.transition(all 0.3s ease-in-out);
+		}
+		.wps_page_4_content {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			height: 80%;
+			width: 100%;
+		}
+		.content_entry {
+			font-family: @font_fz;
+			color: #fff;
+			float: right;
+			margin-right: 5%;
+			margin-top: 12%;
+			opacity: 0;
+			.transition(all 1s ease-in-out);
+
+			@media screen and (max-width:1050px) {
+				float: none;
+			}
+		}
+		.wps_p_title {
+			font-size: 60px;
+			height: 60px;
+			line-height: 60px;
+			margin-bottom: 20px;
+
+			@media screen and (max-width:1260px) {
+				font-size: 40px;
+				height: 40px;
+				line-height: 40px;
+			}
+		}
+		.wps_p_entry {
+			font-size: 16px;
+			height: 16px;
+			line-height: 16px;
+			margin-bottom: 10px;
+
+			@media screen and (max-width:1260px) {
+				font-size: 14px;
+				height: 14px;
+				line-height: 14px;
+			}
+		}
+		.content_drama {
+			float: right;
+			height: 100%;
+			opacity: 0;
+			.transform(translate3d(0, 50%, 0));
+			.transition(all 0.8s ease-in-out);
+
+			@media screen and (max-width:1260px) {
+				margin: 100px -120px -0 0;
+			}
+		}
+		.content_img {
+			height: 100%;
+		}
+		&-transition {
+			.content_drama {
+				opacity: 1;
+				.transform(translate3d(0, 0, 0));
+			}
+			.content_entry {
+				.transform(translate3d(0, -60%, 0));
+				opacity: 1;
+			}
+		}
+		&-ready {
+			.cover {
+				// .transform(translate3d(0, 0, 0));
+				opacity: 1;
+			}
+		}
+	}
+}
